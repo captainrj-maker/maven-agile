@@ -2,12 +2,16 @@ package com.example;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class AppTest {
-
-    @Test
-    public void testAdd() {
-        App app = new App();
-        assertEquals(5, app.add(2, 3));
+    public class PrimeCheckerTest {
+        @Test 
+        void test() {
+            PrimeChecker p = new PrimeChecker();
+            assertTrue(p.isPrime(7));
+            assertFalse(p.isPrime(4));            
+        }
     }
 }
